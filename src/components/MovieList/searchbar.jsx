@@ -1,12 +1,19 @@
 import React, { useState } from "react"
 import "./style.css"
-const SearchBar = () => {
+
+const SearchBar = ({ onSearch  }) => {
     const [searchValue,setSearchValue] = useState("");
 
     const handleInput = (event)=>{
-        setSearchValue(event.target.searchValue);
-        console.log("I am typing",searchValue);
+        setSearchValue(event.target.value);
+        console.log("I am typing",event.target.value);
 
+    }
+
+    
+    const handleSearchClick = ()=>{
+        console.log("I am typing");
+        onSearch(searchValue);
     }
     return(
         <div>
@@ -16,9 +23,7 @@ const SearchBar = () => {
              placeholder="Search" 
              value={searchValue} 
             onChange={handleInput}/>
-            <button onClick={()=>
-            console.log("I am typing")
-        }>Search</button>
+            <button onClick= {handleSearchClick}>Search</button>
         
             </div>
     )   

@@ -18,25 +18,3 @@ export const getMovies = async () => {
             return error.message
         }
 }
-export const handleSearch=(searchValue)=>{
-    if (!searchValue.trim()){
-
-        getMovies();
-    }
-    else{
-        try{
-            const response =fetch(`${BASE_URL}/search/movie?query={searchValue}`,{
-               method: 'GET',
-               headers: {
-                Authorization: `Bearer ${ACCESS_TOKEN}`
-               }
-            });
-            const result = response.json();
-            console.log("result", result);
-            return result;
-            }
-            catch(error){
-                return error.message
-            }
-        }
-    }

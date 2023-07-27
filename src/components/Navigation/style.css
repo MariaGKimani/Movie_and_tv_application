@@ -1,11 +1,11 @@
 .Navbar {
-    background-color: #000;
+    /* background-color: #000; */
     height: 70px;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    /* z-index: 1; */
+    z-index: 100;
 }
 .nav {
     display: flex;
@@ -47,7 +47,6 @@ li {
 }
 li:hover {
     color: rgb(255, 174, 0);
-    /* text-decoration: underline; */
 }
   button {
     background-color: rgb(255, 174, 0);
@@ -57,19 +56,26 @@ li:hover {
     outline: 0;
     cursor: pointer;
     border-radius: 12px;
-    margin-top: -12px;
   }
   button:hover {
     background-color: black;
     color: #fff;
-    padding: 10px 10px;
+    padding: 10px 20px;
     border: 1px solid rgb(255, 174, 0);
     outline: 0;
-   cursor: pointer;
+    cursor: pointer;
   }
-.bar{
-  margin-left: 675px;
-  position: relative;
-  bottom: 30px;
-  padding: 10px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

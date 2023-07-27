@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { getMovies } from "../../utils/utilities";
 import "./style.css";
-import ImageConatiner from "../../atoms/Image-container";
+import ImageContainer from "../../atoms/Image-container";
 import SearchBar from "./searchbar";
 import { Link } from "react-router-dom";
+
+
+
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 const ACCESS_TOKEN = process.env.REACT_APP_ACCESS_TOKEN;
+
+
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -57,7 +62,7 @@ const MovieList = () => {
         ) : (
           movies.map((item) => (
             <Link  key={item.id}to={`/MovieDetails/${item.id}`}>
-           <ImageConatiner  props={item} />
+           <ImageContainer  props={item} />
             </Link>
         )
         ))}

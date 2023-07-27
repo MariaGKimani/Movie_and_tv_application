@@ -24,11 +24,7 @@ const SearchBar = ({onSearch}) => {
                     type="text" placeholder="Search" />
                      <button onClick={handleSearchClick}className="bar">search</button>
                 </div>
-                <div className="links">
-                    <li>Home</li>
-                    <li>My list</li>
-                    {/* <button>Sign in</button> */}
-                </div>
+               
             </nav>
        </div>
   );
